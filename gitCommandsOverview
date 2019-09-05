@@ -1,0 +1,70 @@
+# This short script runs through the process of making a git commit locally, and interfacing with an online github repo
+
+# Create directory and point to directory. Initialise git.
+mkdir ~/Desktop/gitTest
+cd ~/Desktop/gitTest
+git init
+
+# Create a sample file in empty repo
+touch demo.txt
+
+# Add file. This basically lets Git knows that this is a change that needs to be tracked, but git doesn't push the change unless you tell it to commit
+git add demo.txt
+git add . #to add all edits
+
+# Commit file, add in comments for what you changed in this commit
+git commit -m 'Initial Commit'
+
+# You can run git log to see a history of changes to this repo. You see the prior commit, and the comment recording why it was done
+git log
+
+# Suppose, after comitting, I make further edits to the file. You just repeat the add/commit process above.
+sudo nano demo.txt
+git add .
+git commit -m 'First edit after commit'
+git log
+
+# Check that no other tracked file has not been committed
+git status
+
+# Usually, if multiple individuals are working on the same file, it is best practise to work off a branch of the main folder. A branch is basically a "duplicate" of the main branch. Usually, the main branch is the last universally agreed set of codes/data that people will work off, and branches are where people do their separate work before merging into the main branch eventually.
+
+# Create branch
+git branch yjBranch
+
+# Switch to branch environment, and check that you are in the right branch
+git checkout yjBranch
+git branch
+
+# Now, you can make edits as per normal to the test.txt file
+sudo nano test.txt
+git add test.txt
+git commit -m 'Branch commit'
+
+# Notice that git log maintains prior commits to both the main branch and your subbranch 
+git log
+
+# After editing, you now want to merge your branch back into the main branch
+git checkout master
+git merge yjBranch
+
+# Having done what is needed in the local environment, we want to push this to the remote environment, which in this case is a github repo. This assumes that you already have a github repo set up called "gitTest"
+git remote add origin https://github.com/yjtek/gitTest.git
+git push -u origin master #add user and auth key, see your email or generate from github
+
+# Once the repo is on github, you can pull the repo directly to get the latest update in the repo, in case other people have made changes to the master branch. Think of this as getting an update for this folder.
+git pull origin master
+
+#Alternatively, if you lose your local version, you can easily clone the remote repo in your local environment by using git clone
+git clone https://github.com/yjtek/gitTest.git
+
+#In the event of conflicts in files, git gives a line by line indication of where conflicts arise. This can be resolved by team members offline, before agreeing on a commit to be pushed. See example below:
+
+The "<<<...HEAD" indicates the start of the conflict, and ">>>..." indicates the end of the conflict, with the section that needs resolving in between. In this case, the file indicates that team members need to choose between "content to append" and "totally different content to merge later". Once this is resolved, just delete the indicators and save the text file, before proceeding with the git merge and git push.
+
+<<<<<<< HEAD
+this is some content to mess with
+content to append
+=======
+totally different content to merge later
+>>>>>>> new_branch_to_merge_later
