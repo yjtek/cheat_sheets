@@ -49,6 +49,8 @@ git checkout master
 git merge yjBranch
 
 # Having done what is needed in the local environment, we want to push this to the remote environment, which in this case is a github repo. This assumes that you already have a github repo set up called "gitTest"
+git remote -v #see existing remote repo path
+git remote remove origin #remove path, replace with separate path
 git remote add origin https://github.com/yjtek/gitTest.git
 git push -u origin master #add user and auth key, see your email or generate from github
 
