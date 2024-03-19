@@ -1,10 +1,10 @@
 ## Setting up environment
 - poetry init
 
-#make virtualenv in project dir instead of in poetry's virtualenv dir
+#make virtualenv in project dir instead of in poetry's virtualenv dir \\
 - poetry config virtualenvs.in-project true
 
-#if .venv exists in directory, poetry uses this path to manage installation
+#if .venv exists in directory, poetry uses this path to manage installation \\
 - poetry config virtualenvs.in-project true --local 
 - poetry install --no-root
 
