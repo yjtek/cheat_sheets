@@ -33,4 +33,12 @@ curl https://pyenv.run | bash
 ### Creating a virtual environment
 - Pyenv can be used with virtualenv to create and manage virtual environments
   - `pyenv virtualenv 3.6.8 virtual_environment_name`
-- 
+
+- You can use the environment you created by calling
+  - `pyenv local virtual_environment_name`
+  - `pyenv activate virtual_environment_name`
+
+- And deactivating virtual environment is simply
+  - `pyenv deactivate`
+ 
+- Note: When setting `pyenv local` in a directory, pyenv automatically switches to the right version of python when you change directories. This may or may not be desired
