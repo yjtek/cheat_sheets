@@ -16,3 +16,6 @@
 - poetry config pypi-token.test-pypi pypi-<TOKEN>
 - poetry build
 - poetry publish --build -r test-pypi
+
+## Export requirements.txt from poetry
+- poetry export --without-hashes --format=requirements.txt > requirements.txt
