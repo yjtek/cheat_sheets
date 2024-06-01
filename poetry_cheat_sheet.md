@@ -11,6 +11,9 @@
 
 - poetry env list
 
+- deactivate
+
+
 ## Publishing package
 - poetry config repositories.test-pypi https://test.pypi.org/legacy
 - poetry config pypi-token.test-pypi pypi-<TOKEN>
