@@ -1,5 +1,6 @@
 # Start docker/colima daemon
 - dockerd / colima start
+- colima stop
 
 # Build image
 - docker build . --tag 'my-image' --file /Users/yongjian.tek/Desktop/Dockerfile
