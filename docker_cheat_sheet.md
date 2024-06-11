@@ -18,3 +18,20 @@
 - docker ps ## Get docker process status
 - docker container stop <container id> #graceful shutdown
 - docker kill <container id> #ungraceful shutdown
+
+# Look into container
+- docker exec -it <container name> bash ##override default command of container
+
+# Dockerhub
+## login to dockerhub
+- docker login
+
+## Upload to dockerhub
+- docker image tag <image name> <account name>/<image name> #need to tag docker image to 
+- docker push <image name>
+
+# Docker Compose
+There will be cases when you need to spin up multiple containers, and they must be spun up in some order. In such cases, `docker compose` will be how you orchestrate the containers
+- docker compose -f docker-compose-dev.yml up -d
+
+Note that in production (i.e. docker-compose-prd) you never want to actually `build` the image. Only build the image in dev/stg, and pull the appropriate image into prd (i.e. replace `build:` with `image:`
