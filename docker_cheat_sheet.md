@@ -13,6 +13,7 @@
 
 # View containers
 - docker ps
+- docker inspect <container name> #more detailed container info
 
 # Remove unused images
 - docker rmi <image name>
