@@ -4,23 +4,35 @@
 
 # Build image
 - docker build . --tag 'my-image' --file /Users/yongjian.tek/Desktop/Dockerfile
-  
+
+# Pull image
+- docker pull <image name> #if image is not local, pull from dockerhub
+
 # View system images 
 - docker images
 
+# View containers
+- docker ps
+
 # Remove unused images
+- docker rmi <image name>
 - docker system prune
 
 # Run image
 - docker run -p 8088:8088 <image name / image id> # Run docker image with port forwarding
 
 # Stop container
-- docker ps ## Get docker process status
 - docker container stop <container id> #graceful shutdown
+- docker stop <container name>
+- docker rm <container name>
 - docker kill <container id> #ungraceful shutdown
 
 # Look into container
 - docker exec -it <container name> bash ##override default command of container
+
+# Run in detached mode
+- docker run -d webapp #avoids locking the stdout of the container
+
 
 # Dockerhub
 ## login to dockerhub
