@@ -4,6 +4,7 @@
 
 # Build image
 - docker build . --tag 'my-image' --file /Users/yongjian.tek/Desktop/Dockerfile
+- docker history \<container name\>
 
 # Pull image
 - docker pull \<image name\> #if image is not local, pull from dockerhub
@@ -34,8 +35,11 @@
 # Run in detached mode
 - docker run -d webapp #avoids locking the stdout of the container
 
-# Attaching environment variables
+# Attaching/Inspecting environment variables
 - docker run -e ENV_VAR_NAME=env-var \<image name\>
+- docker inspect \<container name\>
+
+
 
 # Dockerhub
 ## login to dockerhub
