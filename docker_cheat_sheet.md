@@ -39,7 +39,9 @@
 - docker run -e ENV_VAR_NAME=env-var \<image name\>
 - docker inspect \<container name\>
 
-
+# Mounting data
+- docker run --mount type=bind, source=/data/mysql, target=/var/lib/mysql my-image ##new syntax
+- docker run -v some_persistent_volume:/var/lib/mysql mysql ##old syntax
 
 # Dockerhub
 ## login to dockerhub
