@@ -34,6 +34,8 @@
 # Run in detached mode
 - docker run -d webapp #avoids locking the stdout of the container
 
+# Attaching environment variables
+- docker run -e ENV_VAR_NAME=env-var \<image name\>
 
 # Dockerhub
 ## login to dockerhub
