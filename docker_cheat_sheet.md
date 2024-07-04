@@ -43,6 +43,9 @@
 - docker run --mount type=bind, source=/data/mysql, target=/var/lib/mysql my-image ##new syntax
 - docker run -v some_persistent_volume:/var/lib/mysql mysql ##old syntax
 
+# Logs
+- docker logs backend_container
+
 # Dockerhub
 ## login to dockerhub
 - docker login
