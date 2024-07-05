@@ -44,7 +44,7 @@
 - docker run -v some_persistent_volume:/var/lib/mysql mysql ##old syntax
 
 # Logs
-- docker logs backend_container
+- docker logs --follow  backend_container
 
 # Dockerhub
 ## login to dockerhub
