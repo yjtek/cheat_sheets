@@ -6,7 +6,7 @@
 
 - poetry shell #activate environment
 
-- poetry add scikit-learn
+- poetry add scikit-learn==">1.0.0"
 - poetry remove scikit-learn
 
 - poetry env list
