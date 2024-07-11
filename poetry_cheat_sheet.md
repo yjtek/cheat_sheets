@@ -11,6 +11,8 @@
 
 - poetry env list
 
+- poetry env info --path # Find poetry env path
+
 - deactivate
 
 
