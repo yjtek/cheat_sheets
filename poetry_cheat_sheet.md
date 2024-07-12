@@ -15,6 +15,10 @@
 
 - deactivate
 
+## Selecting env on vscode
+
+- CTRL-SHIFT-P
+- Python: Select Interpreter
 
 ## Publishing package
 - poetry config repositories.test-pypi https://test.pypi.org/legacy
