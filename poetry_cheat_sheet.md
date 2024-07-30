@@ -4,6 +4,9 @@
 - poetry config virtualenvs.in-project true --local #if .venv exists in directory, poetry uses this path to manage installation 
 - poetry install --no-root
 
+- poetry source add --priority=explicit private-repo https://private-repo
+- poetry add --source private-repo private-package==$VERSION
+
 - poetry shell #activate environment
 
 - poetry add scikit-learn==">1.0.0"
