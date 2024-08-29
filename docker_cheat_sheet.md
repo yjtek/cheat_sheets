@@ -1,5 +1,5 @@
 # Start docker/colima daemon
-- dockerd / colima start
+- dockerd / colima start --cpu 3 --memory 6 --disk 20
 - colima stop
 
 # Build image
