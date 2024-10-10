@@ -4,6 +4,12 @@
 `uv venv`
 - Create new virtualenv
 
+`uv python install` / `uv python uninstall` / `uv python list` / `uv python find`
+- Manage python versions
+
+`uv python pin` 
+- Pin current project to python version
+
 `uv add numpy==1.0.0`
 - Add package to virtual env
 
