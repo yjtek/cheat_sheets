@@ -30,3 +30,6 @@
 
 `uv build`
 - Build source distribution and binary distribution for project
+
+`uv pip freeze > requirements.txt`
+- Output requirements.txt
