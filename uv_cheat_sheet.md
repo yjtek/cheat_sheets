@@ -16,6 +16,9 @@
 `uv remove numpy==1.0.0`
 - Remove package to virtual env
 
+`uv sync`
+- Sync env with requirements
+
 `uv lock`
 - Create lockfile for project's dependencies
 
