@@ -1,3 +1,4 @@
+`export UV_PROJECT_ROOT=.`
 `uv init`
 - Initialises a project in the directory
 
