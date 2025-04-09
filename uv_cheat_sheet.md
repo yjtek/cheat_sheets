@@ -1,5 +1,4 @@
-`export UV_PROJECT_ROOT=.`
-`uv init`
+`export UV_PROJECT_ROOT=.` | `uv init`
 - Initialises a project in the directory
 
 `uv venv ./my/dir/name --python 3.11`
