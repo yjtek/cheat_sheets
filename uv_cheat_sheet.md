@@ -36,3 +36,6 @@
 
 `uv pip freeze > requirements.txt`
 - Output requirements.txt
+
+`uv pip compile pyproject.toml > requirements.txt`
+- Output requirements.txt with more detail
