@@ -1,0 +1,16 @@
+[project]
+name = "argparse-greet"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "argparse>=1.4.0",
+]
+
+[project.scripts]
+greet = "greet:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
