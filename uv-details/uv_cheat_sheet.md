@@ -32,7 +32,10 @@
 - Use UV to run any arbitrary script or package
 
 `uv build`
-- Build source distribution and binary distribution for project
+- Build source distribution and binary distribution for project, generates wheel and tar.gz file
+
+`uv publish`
+- Publish to pypi or whatever directory you specify
 
 `uv pip freeze > requirements.txt`
 - Output requirements.txt

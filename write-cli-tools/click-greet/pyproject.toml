@@ -1,14 +1,14 @@
 [project]
-name = "argparse-greet"
-version = "0.1.5"
+name = "click-greet"
+version = "0.1.3"
 authors = [
-  { name="yj", email="yj@yj.yj" },
+  { name="yj", email="yj@yj.yj" }
 ]
-description = "Test deploy"
+description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "argparse>=1.4.0",
+    "click==8.2.0",
     "twine>=6.1.0",
 ]
 license = "MIT"
@@ -19,14 +19,19 @@ Homepage = "https://github.com/pypa/sampleproject"
 Issues = "https://github.com/pypa/sampleproject/issues"
 
 [project.scripts]
-greet = "argparse_greet.main:main"
+greet = "click_greet.main:main"
 
 [build-system]
-requires = ["hatchling >= 1.26"]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/argparse_greet"]
+packages = ["src/click_greet"]
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple/"
+explicit = false 
 
 [[tool.uv.index]]
 name = "testpypi"
