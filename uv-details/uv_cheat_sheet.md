@@ -10,8 +10,8 @@
 `uv python pin` 
 - Pin current project to python version
 
-`uv add numpy==1.0.0`
-- Add package to virtual env
+`uv add numpy==1.0.0` / `uv add --dev flake8` / `uv add --group lint ruff`
+- Add package to virtual env. You can specify dev dependencies, or some custom grouping as well
 
 `uv add "jax; sys_platform == 'linux'"`
 - It is also possible to add packages CONDITIONALLY, only if a platform marker meets the requirements
