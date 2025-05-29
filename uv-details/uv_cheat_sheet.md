@@ -43,5 +43,5 @@
 `uv pip freeze > requirements.txt`
 - Output requirements.txt
 
-`uv pip compile pyproject.toml > requirements.txt`
-- Output requirements.txt with more detail
+`uv pip compile pyproject.toml > requirements.txt` | `uv pip compile --extra dev pyproject.toml > requirements.txt`
+- Output requirements.txt with more detail. Use `--extra` flag for optional groups
