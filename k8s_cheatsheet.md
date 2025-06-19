@@ -1,5 +1,5 @@
 # Manage AWS SSO profiles
-- See in `~/.aws`
+- See in `~/.aws/config`
 
 # Login to AWS CLI
 - The export is needed because kubectl references environment variable `AWS_PROFILE`, so even if you're logged in you may not have access to cluster
