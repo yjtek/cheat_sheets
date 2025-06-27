@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
 
-import libwyag
+from libwyag import libwyag
 libwyag.main()
