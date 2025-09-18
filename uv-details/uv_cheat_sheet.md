@@ -19,7 +19,7 @@
 `uv remove numpy==1.0.0`
 - Remove package to virtual env
 
-`uv sync` | `uv sync --group dev`
+`uv sync` | `uv sync --group dev` | `uv sync --extra dev`
 - Sync env with requirements. Useful if you've updated your pyproject.toml manually
 
 `uv lock`
