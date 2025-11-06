@@ -32,3 +32,16 @@
 
 ## Pull from remote
 - git pull origin master
+
+## Push
+- git push origin branch1
+  - Given a branch, if your local branch1 is based on the same commit  as the remote branch1, update remotes with new commits
+  - If the remote has new commits you don’t have, the push is rejected
+  - ONLY accepts fast forward, 
+- git push --force
+  - Given a branch, no matter what is on the remote, overwrite it with my current commit.
+  - Any commits on the remote that you haven’t fetched will be overwritten
+- git push --force-with-lease
+  - Replace the remote branch only if it still points to the commit you last fetched from it
+  - So if your local branch rewrites history (like a rebase), it updates the remote IF the remote has not moved since you last fetched
+  - If someone has pushed, it will not push until you rebase again
