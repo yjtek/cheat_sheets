@@ -31,7 +31,7 @@
 
 # Find pods
 - `kubectl get pods` 
-- `kubectl get pods -namespace mkpl-mle`
+- `kubectl get pods --namespace mkpl-mle`
 
 # See all containers in a pod. Most pods will have 1 container, some may have more
 - `kubectl get pod flink-transport-surge-redis-taskmanager-6849d78c87-82vbz -o jsonpath="{.spec.containers[*].name}"`
