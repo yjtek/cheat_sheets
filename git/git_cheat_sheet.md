@@ -45,3 +45,16 @@
   - Replace the remote branch only if it still points to the commit you last fetched from it
   - So if your local branch rewrites history (like a rebase), it updates the remote IF the remote has not moved since you last fetched
   - If someone has pushed, it will not push until you rebase again
+
+## Worktree
+- git worktree add ~/worktrees/new-branch -b new-branch
+  - Often, we are multitasking in the same repo
+  - But switching between branches is often difficult, because switching requires either a commit of your current changes, or a stash. This pollutes your commit history, and risks introducing changes that are unintended. Either that, or you need to keep track of a really big stash history
+  - With git worktree, you basically make another copy of your repo in another directory (in this case, in your ~/worktrees directory)
+  - git treats it as a new directory, but at the same time, manages it through **THE SAME** git database!
+  - Changes in your worktree directory get merged automatically to your master, and you can do all the usual rebase, fast forward etc
+  - Once done, you can commit your changes to your branch as per normal!
+- git worktree remove ~/worktrees/new-branch
+  - Once your changes are merged, simply remove the worktree!
+       
+  - 
