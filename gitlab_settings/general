@@ -1,0 +1,43 @@
+## General
+
+### Naming, description, topics
+
+- Modify project name, project ID
+- Add project description and topic tags
+
+### Visibility, project features, permissions
+
+- Project visibility: Private, Internal, or Public. Controls foundational access to the project
+- Work items: Duplicates Jira functionality, if you don't want to leave gitlab to do planning
+- Repository: Controls who has merge/clone/fork/cicd access to the project
+- Container registry: Configures access to gitlab's container registry. Same service as ECR, just tightly coupled to gitlab if your release pipelines are run through gitlab
+- Analytics: Data and insights into how your project is performing, how efficiently your team is working, and the overall health of your codebase
+- Requirements: Used for industries with strict regulations; basically you specify a set of tests that MUST pass, and these are legally binding requirements for any release. These usually include tests that go beyond software
+- Security and compliance: Gitlab will check for vulnerabilities, Dependency List, secrets etc with every push
+- Wiki: Every gitlab project can have a corresponding wiki page at https://gitlab.*.net/**/*/*.wiki.git
+- Snippets: Convenience feature, to share commonly used code with users without needing to dive through the codebase
+- Package registry: Project's library store. You can use this to package your code base and allow others to install it via pip/npm
+- Model experiments / Model registry: Gitlab wrapper for MLFlow. Basically removes the need for you to manage your own MLFlow instance, access control, etc
+- Monitor: ELK stack clone. ingesting, aggregating, and visualizing Logs, Metrics, and Traces
+- Environments: Tracks deployment environments (dev, stg, prd) and history
+- Feature flags: Binary toggles that you can use to change behaviour in deployed code. You can use this to flip binary flags on and off in deployed code without redeploying. This lets you do instant rollbacks, canary deploys, etc
+- Infrastructure: Basically gitlab managed terraform
+- Releases: Documents what has changed with every new deployment/release of your code base
+
+### Badges
+
+- Badges are visual indicators added to a code base to display information. Could be anything from pipeline health, to version, to test coverage
+
+### GitLab Duo
+
+- This is the catch all AI native tool suite for Gitlab
+
+### Service Desk
+
+- Service Desk lets you specify an email that will take customer feedback and create tickets
+- Means gitlab automatically becomes a customer support ticketing system
+
+### Advanced
+
+- Housekeeping: Deletes/compresses pack files. Gitlab actuually runs this periodically automatically. You don't need to trigger this manually
+- Export Project / Change Path: Like renaming project
