@@ -14,4 +14,29 @@
 
 ### Merge options
 
-- Enable merged results pipelines: When enabled, pipelines validate the combined results of the source and target branches, to avoid conflicts. Technically fast forward merge already 
+- Enable merged results pipelines: When enabled, pipelines validate the combined results of the source and target branches, to avoid conflicts. Technically fast forward merge already handles this.
+- Enable merge trains: If there are 3 parallel merges, gitlab spins up some tmp branches that tests master + A, master + A + B, master + A + B + C. The downside is if something derails A, then the pipelines for B and C are wasted. Why wasted? Because the success of the 2nd and 3rd pipelines assumes the success of the first.
+- Automatically resolve merge request diff threads when they become outdated: basically you "resolve" discussion as soon as a commit touches the line where the discussion was created
+- Show link to create or view a merge request when pushing from the command line: git push in git CLI
+- Enable "Delete source branch" option by default: delete branch after merge
+- Squash commits when merging: combine all intermediate commits during dev work into a single commit
+- Merge checks
+  - Pipelines must succeed: unsuccessful CI won't allow merge
+  - All threads must be resolved: All discussion threads must be resolved
+  - Status checks must succeed: If your CI pipelines involves external platform checks, this waits for external checks to pass before allowin merge
+  - All security policy pipelines must succeed: Enforces that any security policy you configure for your repo must pass before merge
+  - Require an associated issue from Jira
+  - Title must match required pattern
+- Status checks: Where you configure external status checks. Used alongside merge check `Status checks must succeed`
+- Merge suggestions: How people should give comments in the MR
+- Merge commit message template: How commit messages should look like
+- Squash commit message template: What a squash commit message shouuld look like
+- Default description template for merge requests: MR description
+
+### Merge request approvals
+
+- Set up required approvals for MR
+
+### Merge request branch workflow
+
+- Set up regex patterns where specific branch names get merged into different branches  (i.e. besides master)
